@@ -3,6 +3,7 @@ var Decks = require('Decks');
 var Types = require('Types');
 var ActorPlayingState = Types.ActorPlayingState;
 var Fsm = require('game-fsm');
+import {strongTrace} from "./test";
 
 var Game = cc.Class({
     extends: cc.Component,
@@ -43,7 +44,7 @@ var Game = cc.Class({
         this.betUI.init();
         this.dealer = this.dealer.getComponent('Dealer');
         this.dealer.init();
-
+        strongTrace("Test!!!!!!!!!!!!!!!!!!!!1");
         //
         this.player = null;
         this.createPlayers();
